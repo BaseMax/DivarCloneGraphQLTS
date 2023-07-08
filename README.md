@@ -1,8 +1,7 @@
 # Divar-Clone GraphQL TS
 
-GraphQL-based Divar.ir Clone
+**GraphQL-based Divar.ir Clone**
 
-Description
 This project aims to create a clone of the popular Iranian classified advertisements website, Divar.ir, using GraphQL as the primary API technology. The clone will replicate the core features and functionality of Divar.ir, allowing users to post ads, browse listings, search for items, and communicate with sellers.
 
 The project will utilize GraphQL to provide a flexible and efficient API that enables clients to query and mutate data. GraphQL offers a declarative and efficient approach to retrieve specific data requirements, reducing over-fetching and under-fetching of data.
