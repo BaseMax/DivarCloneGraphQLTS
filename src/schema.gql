@@ -1,0 +1,41 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Auth {
+  token: String!
+  name: String!
+}
+
+type User {
+  name: String!
+}
+
+type Query {
+  findAllUsers: [User!]!
+  findOnUser: User!
+}
+
+type Mutation {
+  signup(signupInput: SignupInput!): Auth!
+  login(loginInput: LoginInput!): Auth!
+  updateUser(updateUserInput: UpdateUserInput!): User!
+  removeUser: User!
+}
+
+input SignupInput {
+  phoneNumber: String!
+  name: String!
+  password: String!
+}
+
+input LoginInput {
+  phoneNumber: String!
+  password: String!
+}
+
+input UpdateUserInput {
+  phoneNumber: String
+  name: String
+  password: String
+}
