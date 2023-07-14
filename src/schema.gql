@@ -11,9 +11,46 @@ type User {
   name: String!
 }
 
+type Post {
+  _id: String!
+  title: String!
+  description: String!
+  price: Float!
+  location: String!
+  imagesUrl: [String!]!
+  category: String!
+  authorId: String!
+}
+
+type Conversation {
+  usersId: [String!]!
+  _id: String!
+}
+
+type Message {
+  _id: String!
+  content: String!
+  senderId: String!
+}
+
 type Query {
   findAllUsers: [User!]!
   findOnUser: User!
+  allPosts: [Post!]!
+  sortBy(sortBy: Sort!): [Post!]!
+  searchByKeyword(keyword: String!): [Post!]!
+  findUserAllConversation: [Conversation!]!
+  findMessages(conversationId: String!): [Message!]!
+}
+
+input Sort {
+  filed: sortByEnum!
+}
+
+enum sortByEnum {
+  category
+  location
+  price
 }
 
 type Mutation {
@@ -21,6 +58,13 @@ type Mutation {
   login(loginInput: LoginInput!): Auth!
   updateUser(updateUserInput: UpdateUserInput!): User!
   removeUser: User!
+  createPost(createPostInput: CreatePostInput!): Post!
+  updateUserPost(updatePostInput: UpdatePostInput!): Post!
+  removePost(postId: String!): Post!
+  createConversation(createConversation: CreateConversation!): Conversation!
+  sendMessage(sendMessage: CreateMessageInput!): Message!
+  removeConversation(conversationId: String!): Conversation!
+  removeMessage(messageId: String!): Message!
 }
 
 input SignupInput {
@@ -38,4 +82,33 @@ input UpdateUserInput {
   phoneNumber: String
   name: String
   password: String
+}
+
+input CreatePostInput {
+  title: String!
+  description: String!
+  category: String!
+  price: Float!
+  location: String!
+  imagesUrl: [String!]!
+}
+
+input UpdatePostInput {
+  title: String
+  description: String
+  category: String
+  price: Float
+  location: String
+  imagesUrl: [String!]
+  id: String!
+}
+
+input CreateConversation {
+  userId: String!
+  postId: String!
+}
+
+input CreateMessageInput {
+  conversationId: String!
+  content: String!
 }

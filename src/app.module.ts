@@ -10,6 +10,8 @@ import { ConfigModule, ConfigService } from "@nestjs/config";
 import { UserSchema } from "./auth/dto/signup.dto";
 import { JwtModule } from "@nestjs/jwt";
 import { GraphQLError, GraphQLFormattedError } from "graphql";
+import { PostModule } from './post/post.module';
+import { ChatModule } from './chat/chat.module';
 
 @Module({
   imports: [
@@ -39,6 +41,10 @@ import { GraphQLError, GraphQLFormattedError } from "graphql";
     AuthModule,
 
     UserModule,
+
+    PostModule,
+
+    ChatModule,
   ],
   providers: [ConfigService],
 })

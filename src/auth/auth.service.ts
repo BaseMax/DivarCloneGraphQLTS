@@ -26,6 +26,7 @@ export class AuthService {
       phoneNumber: signupDto.phoneNumber,
     });
 
+
     const token = this.getToken({ sub: newUser._id, name: newUser.name });
 
     return { token, name: newUser.name };

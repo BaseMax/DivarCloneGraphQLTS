@@ -7,6 +7,9 @@ export const GetCurrentUserId = createParamDecorator(
       return context.switchToHttp().getRequest().user.sub;
     }
 
+
+    
+
     const ctx = GqlExecutionContext.create(context);
 
     return ctx.getContext().req.user.sub;
