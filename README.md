@@ -47,6 +47,6 @@ The project will utilize GraphQL to provide a flexible and efficient API that en
 Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request to the project's repository.
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the GPL-3.0 License.
 
 Copyright 2023, Max Base
