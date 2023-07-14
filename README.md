@@ -19,7 +19,7 @@ The project will utilize GraphQL to provide a flexible and efficient API that en
 
 - **GraphQL:** As the primary API technology for querying and mutating data.
 - **Node.js:** Server-side JavaScript runtime environment for building the backend.
-- **Express.js:** A web application framework for Node.js, used to create the server and handle HTTP requests.
+- **Nestjs:** a framework for building scalable and efficient server-side applications using TypeScript.
 - **MongoDB:** A NoSQL database used to store and manage the application data.
 - **Apollo Server:** A GraphQL server implementation for Node.js.
 - **Apollo Client:** A GraphQL client library for React, used for querying and managing data on the frontend.
